@@ -1,30 +1,12 @@
 body {
     margin: auto;
-    padding: 0%;
+    padding: 0;
     background-image: url(https://scontent.fkhi2-2.fna.fbcdn.net/v/t39.30808-6/456486227_1282627062721635_4069833539809302712_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFeSCjoCp-6pYzbiZHv9RNHk6CXK3Ml8jKToJcrcyXyMgEvtqwH3DyqXBKfc_I8MlRvyYXej1mBgm8chQufdskV&_nc_ohc=lcedB-AOO3QQ7kNvgEknd5u&_nc_zt=23&_nc_ht=scontent.fkhi2-2.fna&_nc_gid=AY2rbh2apxiJIhOaj53-kNd&oh=00_AYDKcmOQ-5TUolwZ_aTAoqP28kAjcPza5ZzGlLrr6m_XqA&oe=672317F5);
     background-size: cover;
     background-attachment: fixed;
     position: relative;
-    overflow-y :auto;
     overflow-x: hidden;
     min-height: 100vh;
-}
-background-image {
-    width: 100%;
-    height: auto;
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    .container {
-        display: block;
-        width: 100%;
-        padding: 10px;
-    }
 }
 
 body::after {
@@ -32,47 +14,47 @@ body::after {
     position: absolute;
     top: 0;
     left: 0;
-    width: 500%;
+    width: 100%;
     height: 100%;
     background-color: rgba(28, 28, 28, 0.4);
-    pointer-events: none;
     z-index: -1;
 }
 
-.header {
+.header, .about-header, .contact-header {
+    margin-left: 0;
     font-size: larger;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     padding: 10px 20px;
+    flex-wrap: wrap;
 }
 
-.header h1{
+.header h1, .about-header h1, .contact-header h1 {
     color: white;
     text-transform: uppercase;
     text-align: left;
     margin: 10px;
-    padding-left: 2%;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.header ul{
+.header ul, .about-header ul, .contact-header ul {
     display: flex;
     gap: 30px;
     list-style-type: none;
-    margin: 0%;
     padding: 2%;
     justify-content: flex-end;
-    margin-right: 40px;
+    flex-wrap: wrap;
+    margin: 10px 20px;
 }
 
-.header ul li a{
+.header ul li a, .about-header ul li a, .contact-header ul li a {
     color: white;
     text-decoration: none;
 }
 
-.header ul li a:hover{
+.header ul li a:hover, .about-header ul li a:hover, .contact-header ul li a:hover {
     color: rgb(0, 0, 0);
     transition-duration: 0.2s;
 }
@@ -80,15 +62,15 @@ body::after {
 .main {
     display: flex;
     flex-direction: column;
-    padding-top: 5%;
     align-items: center;
+    padding: 5% 2%;
+    text-align: center;
 }
 
 .main h1 {
-    padding-top: 5%;
-    font-size: 500%;
+    font-size: clamp(2rem, 8vw, 5rem);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(0, 0, 0);
+    color: white;
     overflow: hidden;
     white-space: nowrap;
     text-align: center; 
@@ -120,115 +102,31 @@ body::after {
 }
 
 .main p {
-    color: aliceblue;
+    color: rgb(0, 0, 0);
     margin-top: -1%;
     font-size: large;
 }
 
-.footer {
-    color: rgb(61, 111, 111);
-    text-align: center;
-    margin-top: 10%;
-}
-
-
-.about-body {
-    margin: auto;
-    padding: 0%;
-    background-image: url(https://scontent.fkhi2-2.fna.fbcdn.net/v/t39.30808-6/456486227_1282627062721635_4069833539809302712_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFeSCjoCp-6pYzbiZHv9RNHk6CXK3Ml8jKToJcrcyXyMgEvtqwH3DyqXBKfc_I8MlRvyYXej1mBgm8chQufdskV&_nc_ohc=lcedB-AOO3QQ7kNvgEknd5u&_nc_zt=23&_nc_ht=scontent.fkhi2-2.fna&_nc_gid=AY2rbh2apxiJIhOaj53-kNd&oh=00_AYDKcmOQ-5TUolwZ_aTAoqP28kAjcPza5ZzGlLrr6m_XqA&oe=672317F5);
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    overflow: auto;
-    overflow-x: hidden;
-}
-
-.about-body::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1000%;
-    height: 110%;
-    background-color: rgba(28, 28, 28, 0.4); 
-    pointer-events: none;
-    z-index: -1;
-}
-
-.about-header {
-    font-size: larger;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px 20px;
-}
-
-.about-header h1{
-    color: white;
-    text-transform: uppercase;
-    text-align: left;
-    margin: 10px;
-    padding-left: 2%;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-}
-
-.about-header ul{
-    display: flex;
-    gap: 30px;
-    list-style-type: none;
-    margin: 0%;
-    padding: 2%;
-    justify-content: flex-end;
-    margin-right: 40px;
-}
-
-.about-header ul li a{
-    color: white;
-    text-decoration: none;
-}
-
-.about-header ul li a:hover{
-    color: rgb(0, 0, 0);
-    transition-duration: 0.2s;
-}
-
-
-.about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.about, .contact-info {
+    max-width: 800px;
+    margin: 2% auto;
     padding: 20px;
-    max-width: 800px; 
-    margin: auto;
-    background-color: rgba(104, 39, 34, 0.9); 
+    background-color: rgba(247, 247, 247, 0.9);
     border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.about > div {
-    width: 100%;
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #d5d3d3;
-    border: 1px solid #141414; 
-    border-radius: 8px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); 
-}
-
-.about h1, .about h2 {
+.about h1, .about h2, .contact-info h1 {
     font-weight: bold;
     color: #1e1919; 
     margin-bottom: 10px;
-    text-align: center; 
 }
 
-.about p, .about ul li {
+.about p, .about ul li, .contact-info p {
     color: #555; 
     font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 15px;
-    text-align: center; 
 }
 
 .about ul {
@@ -237,98 +135,23 @@ body::after {
     margin: 0;
 }
 
-.about ul li {
-    margin-bottom: 8px;
-    font-weight: normal;
-}
-
-
-
-.contact-body {
-    margin: auto;
-    padding: 0%;
-    background-image: url(https://scontent.fkhi2-2.fna.fbcdn.net/v/t39.30808-6/456486227_1282627062721635_4069833539809302712_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFeSCjoCp-6pYzbiZHv9RNHk6CXK3Ml8jKToJcrcyXyMgEvtqwH3DyqXBKfc_I8MlRvyYXej1mBgm8chQufdskV&_nc_ohc=lcedB-AOO3QQ7kNvgEknd5u&_nc_zt=23&_nc_ht=scontent.fkhi2-2.fna&_nc_gid=AY2rbh2apxiJIhOaj53-kNd&oh=00_AYDKcmOQ-5TUolwZ_aTAoqP28kAjcPza5ZzGlLrr6m_XqA&oe=672317F5);
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    overflow: auto;
-    overflow-x: hidden;
-}
-
-.contact-body::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1000%;
-    height: 110%;
-    background-color: rgba(28, 28, 28, 0.4); 
-    pointer-events: none;
-    z-index: -1;
-}
-
-.contact-header {
-    font-size: larger;
+.footer, .about-footer, .contact-footer {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px 20px;
-}
-
-.contact-header h1{
-    color: white;
-    text-transform: uppercase;
-    text-align: left;
-    margin: 10px;
-    padding-top: 0%;
-    padding-left: 2%;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-}
-
-.contact-header ul{
-    display: flex;
-    gap: 30px;
-    list-style-type: none;
-    margin: 0%;
-    padding: 2%;
-    justify-content: flex-end;
-    margin-right: 40px;
-}
-
-.contact-header ul li a{
-    color: white;
-    text-decoration: none;
-}
-
-.contact-header ul li a:hover{
-    color: rgb(0, 0, 0);
-    transition-duration: 0.2s;
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 3%;
-}
-
-.contact-info h1{
-    color: aliceblue;
-    font-size: 300%;
-    text-decoration:underline;
-
-}
-
-.contact-info p {
-    font-size: 150%;
-}
-
-
-.contact-footer {
-    align-items: center;
-     display: flex;
     justify-content: center;
     flex-direction: column;
     margin-top: 7%;
+    color: aliceblue;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .header, .about-header, .contact-header {
+        flex-direction: column;
+    }
+    .header ul, .about-header ul, .contact-header ul {
+        justify-content: center;
+    }
+    .main h1 {
+        font-size: 1.8rem;
+    }
 }
