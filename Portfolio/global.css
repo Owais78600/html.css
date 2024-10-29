@@ -148,6 +148,7 @@ body::after {
 @media (max-width: 750px) {
     .header, .about-header, .contact-header {
         flex-direction: column;
+        padding: 15%;
     }
     .header ul, .about-header ul, .contact-header ul {
         justify-content: center;
