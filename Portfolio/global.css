@@ -162,6 +162,6 @@ body::after {
     }
     .footer {
         display: flex;
-        min-height: 60vh;
+        min-height: 20vh;
     }
 }
