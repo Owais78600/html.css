@@ -29,7 +29,7 @@ body::after {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 91%;
+    width: 95%;
     padding: 10px 10px;
     flex-wrap: wrap;
 }
