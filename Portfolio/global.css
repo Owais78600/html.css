@@ -1,11 +1,11 @@
 body {
-    margin: auto;
-    padding: 0;
+/*     margin: auto;
+    padding: 0; */
     background-image: url(https://scontent.fkhi2-2.fna.fbcdn.net/v/t39.30808-6/456486227_1282627062721635_4069833539809302712_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFeSCjoCp-6pYzbiZHv9RNHk6CXK3Ml8jKToJcrcyXyMgEvtqwH3DyqXBKfc_I8MlRvyYXej1mBgm8chQufdskV&_nc_ohc=lcedB-AOO3QQ7kNvgEknd5u&_nc_zt=23&_nc_ht=scontent.fkhi2-2.fna&_nc_gid=AY2rbh2apxiJIhOaj53-kNd&oh=00_AYDKcmOQ-5TUolwZ_aTAoqP28kAjcPza5ZzGlLrr6m_XqA&oe=672317F5);
     background-position: center;
     background-attachment: ;
 /*     position: relative; */
-/*     overflow-x: hidden; */
+    overflow-x: hidden;
     min-height: 100vh;
 }
 
