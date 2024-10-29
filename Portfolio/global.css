@@ -29,8 +29,8 @@ body::after {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    padding: 10px 20px;
+    width: 91%;
+    padding: 10px 10px;
     flex-wrap: wrap;
 }
 
