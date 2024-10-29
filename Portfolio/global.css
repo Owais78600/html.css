@@ -3,11 +3,11 @@ body {
     padding: 0;
     background-image: url(https://scontent.fkhi2-2.fna.fbcdn.net/v/t39.30808-6/456486227_1282627062721635_4069833539809302712_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFeSCjoCp-6pYzbiZHv9RNHk6CXK3Ml8jKToJcrcyXyMgEvtqwH3DyqXBKfc_I8MlRvyYXej1mBgm8chQufdskV&_nc_ohc=lcedB-AOO3QQ7kNvgEknd5u&_nc_zt=23&_nc_ht=scontent.fkhi2-2.fna&_nc_gid=AY2rbh2apxiJIhOaj53-kNd&oh=00_AYDKcmOQ-5TUolwZ_aTAoqP28kAjcPza5ZzGlLrr6m_XqA&oe=672317F5);
     background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-attachment: ;
     position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
     min-height: 100vh;
-    overflow: hidden;
 }
 
 body::after {
@@ -19,32 +19,37 @@ body::after {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(28, 28, 28, 0.4);
+    background-color: rgb(28, 28, 28, 0.4);
     z-index: -1;
 }
 
 .header, .about-header, .contact-header {
+    margin-left: 0;
+    font-size: larger;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
     width: 100%;
+    padding: 10px 20px;
     flex-wrap: wrap;
 }
 
 .header h1, .about-header h1, .contact-header h1 {
     color: white;
+    text-transform: uppercase;
+    text-align: left;
+    margin: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.5rem;
 }
 
 .header ul, .about-header ul, .contact-header ul {
     display: flex;
-    gap: 20px;
-    list-style: none;
-    margin: 10px;
-    padding: 0;
+    gap: 30px;
+    list-style-type: none;
+    padding: 2%;
     justify-content: flex-end;
+    flex-wrap: wrap;
+    margin: 10px 20px;
 }
 
 .header ul li a, .about-header ul li a, .contact-header ul li a {
@@ -54,7 +59,7 @@ body::after {
 
 .header ul li a:hover, .about-header ul li a:hover, .contact-header ul li a:hover {
     color: rgb(0, 0, 0);
-    transition: color 0.2s;
+    transition-duration: 0.2s;
 }
 
 .main {
@@ -101,8 +106,8 @@ body::after {
 
 .main p {
     color: rgb(0, 0, 0);
-    font-size: large;
     margin-top: -1%;
+    font-size: large;
 }
 
 .about, .contact-info {
@@ -115,41 +120,48 @@ body::after {
     text-align: center;
 }
 
-.footer {
+.about h1, .about h2, .contact-info h1 {
+    font-weight: bold;
+    color: #1e1919; 
+    margin-bottom: 10px;
+}
+
+.about p, .about ul li, .contact-info p {
+    color: #555; 
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.about ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer, .about-footer, .contact-footer {
     display: flex;
     justify-content: center;
-    margin-top: 5%;
+    flex-direction: column;
+    margin-top: 7%;
     color: aliceblue;
     text-align: center;
-    padding: 20px;
 }
 
 @media (max-width: 750px) {
     .header, .about-header, .contact-header {
         flex-direction: column;
-        align-items: center;
-        padding: 20px;
     }
-
     .header ul, .about-header ul, .contact-header ul {
         justify-content: center;
-        gap: 15px;
-        padding: 0;
     }
-
     .main h1 {
-        font-size: 1.8rem;
-        margin-top: 30px;
+        
+        margin-top: 230px;
+        font-size: 1.5rem;
+        justify-content: center;
     }
-
     .footer {
+        display: flex;
         min-height: 20vh;
-        padding: 10px;
-        font-size: 0.9rem;
-    }
-
-    .about, .contact-info {
-        padding: 15px;
-        font-size: 0.9rem;
     }
 }
