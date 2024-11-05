@@ -3,7 +3,7 @@ body {
     padding: 0;
     background-image: url(https://res.cloudinary.com/duc9rjmma/image/upload/v1724371547/IMG_4536_2_rvs7jk.jpg);
     background-position: center;
-    background-attachment: ;
+    background-attachment: fixed;
     position: relative;
     overflow-x: hidden;
     min-height: 100vh;
