@@ -150,7 +150,7 @@ body::after {
 @media (max-width: 750px) {
     body {
         background-size: contain;
-        background-position: top center;
+        background-position: center;
     }
     .header, .about-header, .contact-header {
         flex-direction: column;
