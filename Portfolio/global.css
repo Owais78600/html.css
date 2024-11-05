@@ -148,9 +148,9 @@ body::after {
 }
 
 @media (max-width: 750px) {
-    .body {
-        Height: 50%;
-    width: 50%;
+    body {
+        background-size: contain;
+        background-position: top center;
     }
     .header, .about-header, .contact-header {
         flex-direction: column;
